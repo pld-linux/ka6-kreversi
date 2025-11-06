@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kreversi
 Summary:	kreversi
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e686883835b01290e6ffc4cc328452ef
+# Source0-md5:	6c288021407f48904982de3589d53bb1
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -56,10 +56,11 @@ declared when one player has more pieces of his own color on the board
 and there are no more possible moves.
 
 %description -l pl.UTF-8
-Kreversi jest prostą grą strategiczną. Gracz gra przeciwko komputerowi.
-Jeśli pionek gracza jest zdobyty przez oponenta, to zmienia swój kolor
-na kolor przeciwnika. Zwycięzcą jest ten z graczy, który ma więcej
-pionków w swoim kolorze, gdy na planszy nie można już wykonać ruchu.
+Kreversi jest prostą grą strategiczną. Gracz gra przeciwko
+komputerowi. Jeśli pionek gracza jest zdobyty przez oponenta, to
+zmienia swój kolor na kolor przeciwnika. Zwycięzcą jest ten z graczy,
+który ma więcej pionków w swoim kolorze, gdy na planszy nie można już
+wykonać ruchu.
 
 %prep
 %setup -q -n %{kaname}-%{version}
